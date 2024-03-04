@@ -1,0 +1,34 @@
+CREATE TABLE servicos (
+    id_servico INT AUTO_INCREMENT PRIMARY KEY,
+    nome_servico VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Cartao (
+    id_cartao INT PRIMARY KEY
+);
+
+CREATE TABLE produtos (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cliente_cartao INT(11),		
+    id_servico INT(11),
+    flag TINYINT(1),
+    created_at DATETIME,
+    updated_at DATETIME,
+    FOREIGN KEY (cliente_cartao)
+        REFERENCES cartao (id_cartao),
+    FOREIGN KEY (id_servico)
+        REFERENCES servicos (id_servico)
+);
+
+
+CREATE TABLE recompensas (
+    id INT(11) PRIMARY KEY NOT NULL auto_increment,
+    cliente_cartao INT(11),
+    id_servico INT,
+    flag TINYINT(1),
+    created_at DATETIME,
+    updated_at DATETIME,
+    FOREIGN KEY (cliente_cartao) REFERENCES cartao(id_cartao),
+    FOREIGN KEY (id_servico) REFERENCES servicos(id_servico)
+);
+)
