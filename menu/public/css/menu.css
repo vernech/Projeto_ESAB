@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+}
+
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background-color: #ffbf00;
+    cursor: pointer;
+    border: 1px solid #969696;
+}
+
+.tab:hover {
+    background-color: #fde59d;
+}
+
+.tab-content {
+    display: none;  
+    padding: 20px;
+    border: 1px solid #000000;
+    color: rgb(0, 0, 0); 
+    
+}
+
+.tab-content.active {
+    display: block;
+    border-radius: 10px;
+}
+
+.generate-button {
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.card-info {
+    margin: 10px 0;
+    color: white; 
+}
+
+.card-input{
+    width: 10%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#numgerado {
+    color: white;
+}
+
+.product-button {
+    display: inline-block;
+    width: 25%;
+    margin: 5px;
+    padding: 5px 10px;
+    text-align: left;
+    background-color: rgb(87, 87, 246);
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.product-button:hover {
+    background-color: rgb(153, 153, 242);   /*b1b0b0*/
+}
+
+.cart {
+    width: 200px; 
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.cart h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart-item {
+    list-style: none;
+    margin: 5px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.clear-cart-button,
+.confirm-purchase-button {
+    width: 45%;
+    padding: 8px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    outline: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.clear-cart-button:hover,
+.confirm-purchase-button:hover {
+    background-color: rgb(151, 151, 151);
+    
+}
+
+
+.prestador-tab{
+    outline: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #f8d56e;
+}
+
+.prestador-tab-content{ 
+    outline: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.prestador-tab-content.active{
+    outline: 1px solid #5b5b5b;
+    border-radius: 10px;
+}
+
+.initially-hidden {
+    display: none;
+}
+
+
+.confirm-purchase-button {
+    width: 50%;
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.confirm-purchase-button:hover {
+    background-color: #bcbcbc; 
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.recompensas-left{
+    float: right;
+    
+}
+
+.relatorio-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+

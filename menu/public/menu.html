@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Clean</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bem-vindo à Master Clean</h1>
+        <button class="generate-button" onclick="gerarecopiar()">○ Gerar Cartão:</button>
+        <div id="numgerado">numeroCartao</div>
+    </div>
+    <p class="card-info">Informe seu cartão:</p>
+    
+    <input type="text" id="numeroCartao" class="card-input" placeholder="Digite seu cartão">
+    <button class="confirm button" onclick="confirmarNumeroCartao()">✓</button>
+    
+    </header>
+
+    <ul class="tabs">
+        <li class="tab" onclick="openTab('tab1')">Comprar</li>
+        <li class="tab" onclick="openTab('tab3')">Página do Prestador de Serviço</li>
+        <li class="tab" onclick="puxarRelatorio()">Relatório</li>
+    </ul>
+    <!--aba de compras-->
+    <div class="container">
+    <div id="tab1" class="tab-content">
+        <h2>Serviços individuais</h2>
+        <p>Escolha os Serviços que deseja comprar:</p>  
+        <button class="product-button" onclick="adicionaProdutoAoCarrinhoLocal('Higienização Interna')">Higienização Interna</button>
+        <button class="product-button" onclick="adicionaProdutoAoCarrinhoLocal('Vitrificação')">Vitrificação</button>
+        <button class="product-button" onclick="adicionaProdutoAoCarrinhoLocal('Enceramento')">Enceramento</button>
+        <button class="product-button" onclick="adicionaProdutoAoCarrinhoLocal('Lavagem externa à seco')">Lavagem externa à seco</button>
+        <button class="product-button" onclick="adicionaProdutoAoCarrinhoLocal('Cristalização de vidros')">Cristalização de vidros</button>
+        <button class="product-button" onclick="adicionaProdutoAoCarrinhoLocal('Polimento do farol')">Polimento do farol</button>
+
+        <h2>Kits de serviços</h2>
+        <p>Escolhas os kits desejados:</p>
+        <button class="product-button" onclick="adicionaProdutoAoCarrinhoLocal('Limpeza externa + Higienização Interna')">Limpeza externa + Higienização Interna</button>
+        <button class="product-button" onclick="adicionaProdutoAoCarrinhoLocal('Martelinho de ouro + Enceramento')">Martelinho de ouro + Enceramento</button>
+    
+
+    <div id="cart" class="cart">
+        <h2>Carrinho:</h2>
+        <ul id="cart-list"></ul>
+        <div class="cart-buttons"> 
+            <button class="clear-cart-button" onclick="esvaziarcarrinho()">Esvaziar Carrinho</button> 
+            <button class="confirm-purchase-button" onclick="confirmarCompra()">Confirmar Compra</button>
+        </div>
+    </div>
+    <div id="cart-icon" class="cart.icon"></div>
+</div>
+<!--aba da pagina do prestador de serviço-->
+<div id="tab3" class="tab-content">
+    <h2>Págida dedicada ao Prestador de Serviço</h2>
+    <p>Escolha a opção desejada:</p>
+    <button class="prestador-tab" onclick="openPrestadorTab('servicos')">Serviços</button>
+    <button class="prestador-tab" onclick="puxarRelatorioGeral(), openPrestadorTab('relatorioGeral')">Relatório Geral</button>
+</div>
+
+<div id="servicos" class="prestador-tab-content initially-hidden cartao-requerido recompensas">
+    <h2>Serviços</h2>
+    <p>Estes são os serviços cadastrados no cartão:</p>     
+    
+    <div class="recompensas recompensas-left">
+        <h2>Recompensas:</h2>
+        <ul id="recompensa-list"></ul>
+    </div>
+    <ul id="product-list"></ul>
+</div>
+
+<div id="relatorioGeral" class="prestador-tab-content initially-hidden">
+    <h2>Relatório Geral</h2>
+    <ul id="relatorio-lista-geral"></ul>
+</div>
+    <!-- fim das abas de prestador de serviço-->
+    
+
+    <!--aba do relatório-->
+    <div id="tab2" class="tab-content">
+        <h2>Relatório</h2>
+        <ul id="relatorio-lista"></ul>
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/servico.js"></script>
+    <script src="js/relatorio.js"></script>
+</body>
+</html>
